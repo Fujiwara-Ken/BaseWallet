@@ -1,12 +1,13 @@
 # SampleSolanaWallet
 
 solana-suite を用いたウォレットシステム
+
 <https://github.com/atonoy/solana-suite>
 
 ## 1. `git clone`
 
 ```shell
-git clone git@github.com:Fujiwara-Ken/next_example.git
+git clone git@github.com:Fujiwara-Ken/BaseWallet.git
 ```
 
 ## 2. `yarn install`
@@ -14,7 +15,7 @@ git clone git@github.com:Fujiwara-Ken/next_example.git
 `yarn install`
 
 ```shell
-# v1.22.15であることを確
+# v1.22.15であることを確認
 yarn -v
 
 #パッケージをインストール
