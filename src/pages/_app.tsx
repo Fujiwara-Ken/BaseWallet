@@ -1,5 +1,6 @@
 import { Auth0Provider } from '@auth0/auth0-react';
 import type { AppProps } from 'next/app';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const redirectUri = `${process.env['NEXT_PUBLIC_BASE_URL']}/success`;
