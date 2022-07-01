@@ -1,9 +1,7 @@
 // eslint-disable-next-line import/order
-import BaseButton from '@/components/elements/BaseButton';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import LoginButton from '../components/layouts/login';
-import LogoutButton from '../components/layouts/logout';
+import LoginForm from '../components/layouts/LoginForm';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -16,9 +14,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <BaseButton label="BaseButton" />
-        <LoginButton />
-        <LogoutButton />
+        <LoginForm />
       </main>
     </div>
   );
