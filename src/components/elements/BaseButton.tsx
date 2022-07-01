@@ -1,7 +1,7 @@
 import React from 'react';
 
 type BaseButtonProps = {
-  handleClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  handleClick?: () => void;
   isDisabled?: boolean;
   label: string;
   width?: string;
@@ -14,7 +14,7 @@ hover:bg-white  hover:text-white hover:ring-slate-300 mx-8 shadow-lg shadow-indi
 const BaseButton: React.FC<BaseButtonProps> = ({ ...props }) => {
   return (
     <div className="grid grid-cols-1 place-items-center">
-      <button type="submit" className={baseButtonStyling}>
+      <button type="submit" className={baseButtonStyling} onClick={props.handleClick}>
         <p>{props.label}</p>
       </button>
     </div>
