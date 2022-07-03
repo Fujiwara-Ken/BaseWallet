@@ -1,11 +1,17 @@
-import { Account } from "@solana-suite/core";
+import NodeRSA from 'node-rsa';
 
-// Walletの公開鍵と秘密鍵を生成
-export const createWallet = () => {
-  const account = Account.create();
+// 初期化
+const key = new NodeRSA({ b: 512 });
 
-  console.log("# pubkey: ", account.pubkey);
-  console.log("# secret: ", account.secret);
+// RSA公開鍵のPEMを生成
+export const generatePublicKey = () => key.exportKey('pkcs1-public-pem');
 
-  return account;
+// RSA秘密鍵のPEMを生成
+export const generatePrivateKey = () => key.exportKey('pkcs1-private-pem');
+
+// 秘密鍵からkeyオブジェクトを復元してtextを復号
+export const decryptText = (rsaPrivateKey: string, encryptedText: string) => {
+  const decryptKey = new NodeRSA(rsaPrivateKey, 'pkcs1-private-pem');
+  const decryptedText = decrypt_key.decrypt(encryptedText, 'utf8');
+  return decryptedText;
 };

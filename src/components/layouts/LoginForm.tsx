@@ -1,6 +1,7 @@
 import React from 'react';
 import BaseTextArea from '../elements/BaseTextArea';
-import LoginButton from '../elements/LoginButton';
+import LoginButton from '../elements/Button/LoginButton';
+import BaseLink from '../elements/Link/BaseLink';
 
 const LoginForm: React.FC = () => {
   return (
@@ -15,14 +16,7 @@ const LoginForm: React.FC = () => {
           <form className="flex flex-col" method="POST" action="#">
             <BaseTextArea label="Email" />
             <BaseTextArea label="Password" />
-            <div className="flex justify-end">
-              <a
-                href="#"
-                className="mb-6 text-sm text-purple-600 hover:text-purple-700 hover:underline"
-              >
-                Forgot your password?
-              </a>
-            </div>
+            <BaseLink />
             <LoginButton />
           </form>
         </section>
