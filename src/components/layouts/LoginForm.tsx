@@ -1,4 +1,5 @@
 import React from 'react';
+import BaseTextArea from '../elements/BaseTextArea';
 import LoginButton from '../elements/LoginButton';
 
 const LoginForm: React.FC = () => {
@@ -12,26 +13,8 @@ const LoginForm: React.FC = () => {
 
         <section className="mt-10">
           <form className="flex flex-col" method="POST" action="#">
-            <div className="pt-3 mb-6 bg-gray-200 rounded">
-              <label className="block mb-2 ml-3 text-sm font-bold text-gray-700" htmlFor="email">
-                Email
-              </label>
-              <input
-                type="text"
-                id="email"
-                className="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:border-purple-600 focus:outline-none"
-              />
-            </div>
-            <div className="pt-3 mb-6 bg-gray-200 rounded">
-              <label className="block mb-2 ml-3 text-sm font-bold text-gray-700" htmlFor="password">
-                Password
-              </label>
-              <input
-                type="password"
-                id="password"
-                className="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:border-purple-600 focus:outline-none"
-              />
-            </div>
+            <BaseTextArea label="Email" />
+            <BaseTextArea label="Password" />
             <div className="flex justify-end">
               <a
                 href="#"
