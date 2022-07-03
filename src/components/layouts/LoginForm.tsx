@@ -1,7 +1,7 @@
 import React from 'react';
-import BaseTextArea from '../elements/BaseTextArea';
 import LoginButton from '../elements/Button/LoginButton';
 import BaseLink from '../elements/Link/BaseLink';
+import BaseTextArea from '../elements/TextArea/BaseTextArea';
 
 const LoginForm: React.FC = () => {
   return (
@@ -20,6 +20,7 @@ const LoginForm: React.FC = () => {
             <LoginButton />
           </form>
         </section>
+        <p>アカウント作ってない場合のサインアップリンクを作る</p>
       </main>
     </>
   );

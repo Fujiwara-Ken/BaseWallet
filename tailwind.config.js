@@ -1,15 +1,22 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  mode: 'jit', //JITモードを有効化
+  mode: 'jit',
   // パージの対象ファイルを設定
   purge: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
+    screens: {
+      tablet: '640px',
+      // => @media (min-width: 640px) { ... }
+
+      laptop: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      desktop: '1280px',
+      // => @media (min-width: 1280px) { ... }
+    },
     fontFamily: {
-      // スプレッドで展開している前に、メインとしたいフォント名を追加する
-      // フォント名にスペースがある場合は、'Noto\\ Sans\\ JP'のように \ (バックスラッシュ)でエスケープする
-      // Serif 体がメインの場合は、 `...defaultTheme.fontFamily.serif` を展開する
       ja: [...defaultTheme.fontFamily.sans],
       en: [...defaultTheme.fontFamily.sans],
     },
