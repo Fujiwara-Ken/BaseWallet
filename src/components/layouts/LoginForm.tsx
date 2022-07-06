@@ -13,7 +13,7 @@ const LoginForm: React.FC = () => {
               alt="Workflow"
             />
             <h2 className="mt-6 text-3xl font-extrabold text-center text-gray-900">
-              Sign in to your Wallet
+              Login to your Wallet
             </h2>
           </div>
           <form className="mt-8 space-y-6" action="#" method="POST">
