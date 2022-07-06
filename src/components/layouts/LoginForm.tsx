@@ -2,6 +2,7 @@ import React from "react";
 import LoginButton from "../elements/Button/LoginButton";
 import BaseLink from "../elements/Link/BaseLink";
 
+// TODO: TextAreaをコンポーネント化 imgタグの変更
 const LoginForm: React.FC = () => {
   return (
     <>
