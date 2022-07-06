@@ -12,9 +12,11 @@
   },
   "dependencies": {
     "@auth0/auth0-react": "^1.10.1",
+    "@heroicons/react": "^1.0.6",
     "@solana-suite/core": "latest",
     "@solana-suite/nft": "latest",
     "@solana-suite/shared": "latest",
+    "@tailwindcss/forms": "^0.5.2",
     "babel-plugin-styled-components": "^2.0.7",
     "crypto-js": "^4.1.1",
     "eslint-plugin-import": "^2.26.0",

@@ -5,6 +5,5 @@
 @layer base {
   body {
     @apply font-ja leading-relaxed tracking-wider;
-    background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
   }
 }

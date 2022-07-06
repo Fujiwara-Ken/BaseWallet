@@ -1,20 +1,17 @@
-import { useAuth0 } from "@auth0/auth0-react";
 import { LockClosedIcon } from "@heroicons/react/solid";
 import React from "react";
 
-type LoginButtonProps = {
+type SignUpButtonProps = {
   handleClick?: () => Promise<void>;
   isDisabled?: boolean;
   className?: string;
   width?: string;
 };
 
-const LoginButton: React.FC<LoginButtonProps> = ({ ...props }) => {
-  const { isAuthenticated, loginWithRedirect } = useAuth0();
-
+const SignUpButton: React.FC<SignUpButtonProps> = ({ ...props }) => {
   const loginButtonStyling = `group flex relative justify-center py-2 px-4 w-full text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2`;
 
-  return isAuthenticated ? null : (
+  return (
     <div>
       <button type="submit" className={loginButtonStyling} onClick={props.handleClick}>
         <span className="flex absolute inset-y-0 left-0 items-center pl-3">
@@ -23,10 +20,10 @@ const LoginButton: React.FC<LoginButtonProps> = ({ ...props }) => {
             aria-hidden="true"
           />
         </span>
-        Login
+        SignUp
       </button>
     </div>
   );
 };
 
-export default LoginButton;
+export default SignUpButton;
