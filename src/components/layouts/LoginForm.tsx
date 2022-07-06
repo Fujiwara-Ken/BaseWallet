@@ -1,5 +1,6 @@
 import React from "react";
 import LoginButton from "../elements/Button/LoginButton";
+import BaseLink from "../elements/Link/BaseLink";
 
 const LoginForm: React.FC = () => {
   return (
@@ -48,15 +49,7 @@ const LoginForm: React.FC = () => {
                 />
               </div>
             </div>
-
-            <div className="flex justify-between items-center">
-              <div className="text-sm">
-                <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                  Forgot your password?
-                </a>
-              </div>
-            </div>
-
+            <BaseLink linkLabel="Forgot your password?" />
             <div>
               {" "}
               <LoginButton />
