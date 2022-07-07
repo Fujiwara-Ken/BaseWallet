@@ -4,7 +4,6 @@ import SignUpButton from "../elements/Button/SignUpButton";
 import BaseLink from "../elements/Link/BaseLink";
 import BaseTextArea from "../elements/TextArea/BaseTextArea";
 
-// TODO: TextAreaをコンポーネント化 imgタグの変更
 const LoginForm: React.FC = () => {
   return (
     <>
@@ -12,9 +11,9 @@ const LoginForm: React.FC = () => {
         <div className="space-y-8 w-full max-w-md">
           <div>
             <img
+              src={"https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"}
+              alt={"Workflow"}
               className="mx-auto w-auto h-12"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-              alt="Workflow"
             />
             <h2 className="mt-6 text-3xl font-extrabold text-center text-gray-900">
               Login to your Wallet
