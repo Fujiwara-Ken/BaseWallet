@@ -1,6 +1,8 @@
 import React from "react";
 import LoginButton from "../elements/Button/LoginButton";
+import SignUpButton from "../elements/Button/SignUpButton";
 import BaseLink from "../elements/Link/BaseLink";
+import BaseTextArea from "../elements/TextArea/BaseTextArea";
 
 // TODO: TextAreaをコンポーネント化 imgタグの変更
 const LoginForm: React.FC = () => {
@@ -22,32 +24,8 @@ const LoginForm: React.FC = () => {
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="-space-y-px rounded-md shadow-sm">
               <div>
-                <label htmlFor="email-address" className="sr-only">
-                  Email address
-                </label>
-                <input
-                  id="email-address"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  className="block relative focus:z-10 py-2 px-3 w-full sm:text-sm text-gray-900 placeholder:text-gray-500 rounded-none rounded-t-md border border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 appearance-none"
-                  placeholder="Email address"
-                />
-              </div>
-              <div>
-                <label htmlFor="password" className="sr-only">
-                  Password
-                </label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  required
-                  className="block relative focus:z-10 py-2 px-3 w-full sm:text-sm text-gray-900 placeholder:text-gray-500 rounded-none rounded-b-md border border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 appearance-none"
-                  placeholder="Password"
-                />
+                <BaseTextArea label="Email" />
+                <BaseTextArea label="Password" />
               </div>
             </div>
             <BaseLink linkLabel="Forgot your password?" />
@@ -57,7 +35,7 @@ const LoginForm: React.FC = () => {
               <div className="flex before:flex-1 after:flex-1 items-center my-4 before:mt-0.5 after:mt-0.5 before:border-t after:border-t before:border-gray-300 after:border-gray-300">
                 <p className="mx-4 mb-0 font-semibold text-center">OR</p>
               </div>
-              <LoginButton />
+              <SignUpButton />
             </div>
           </form>
         </div>

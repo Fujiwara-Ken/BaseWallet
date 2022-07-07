@@ -8,7 +8,7 @@ type SignUpButtonProps = {
 };
 
 const SignUpButton: React.FC<SignUpButtonProps> = ({ ...props }) => {
-  const SignUpButtonStyling = `group flex relative justify-center py-2 px-4 w-full text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2`;
+  const SignUpButtonStyling = `group flex relative justify-center py-2 px-4 w-full text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2`;
 
   return (
     <div>
