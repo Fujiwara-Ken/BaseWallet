@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 import LoginButton from "../elements/Button/LoginButton";
 import SignUpButton from "../elements/Button/SignUpButton";
@@ -5,6 +6,8 @@ import BaseLink from "../elements/Link/BaseLink";
 import BaseTextArea from "../elements/TextArea/BaseTextArea";
 
 const LoginForm: React.FC = () => {
+  const router = useRouter();
+
   return (
     <>
       <div className="flex justify-center items-center py-12 px-4 sm:px-6 lg:px-8 min-h-full">
@@ -33,7 +36,9 @@ const LoginForm: React.FC = () => {
               <div className="flex before:flex-1 after:flex-1 items-center my-4 before:mt-0.5 after:mt-0.5 before:border-t after:border-t before:border-gray-300 after:border-gray-300">
                 <p className="mx-4 mb-0 font-semibold text-center">OR</p>
               </div>
-              <SignUpButton />
+              <SignUpButton handleClick={() => router.push("/signup")} />
+              <SignUpButton handleClick={() => router.push("/token")} />
+              <SignUpButton handleClick={() => router.push("/aaa")} />
             </div>
           </form>
         </div>

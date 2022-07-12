@@ -1,9 +1,10 @@
 import React from "react";
 
 type SignUpButtonProps = {
-  handleClick?: () => Promise<void>;
+  handleClick?: () => Promise<void> | Promise<boolean>;
   isDisabled?: boolean;
   className?: string;
+  url?: string;
   width?: string;
 };
 
