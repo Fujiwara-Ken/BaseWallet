@@ -15,7 +15,7 @@ const SignUpForm: React.FC = () => {
               className="mx-auto w-auto h-12"
             />
             <h2 className="mt-6 text-3xl font-extrabold text-center text-gray-900">
-              Signup to your Wallet
+              SignUp to your Wallet
             </h2>
           </div>
           <form className="mt-8 space-y-6" action="#" method="POST">
