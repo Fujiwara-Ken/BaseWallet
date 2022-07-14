@@ -1,12 +1,13 @@
 // eslint-disable-next-line @next/next/no-document-import-in-page
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import React from "react";
 
 class MyDocument extends Document {
   render() {
     return (
       <Html className="h-full bg-gray-50">
         <Head>
-          <link rel="manifest" href="/manifest.json" />
+          <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials" />
           <link rel="apple-touch-icon" href="/icon/icon-192x192.png"></link>
           <meta name="theme-color" content="#f69435" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />

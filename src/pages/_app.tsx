@@ -1,13 +1,13 @@
-import { Auth0Provider } from '@auth0/auth0-react';
-import type { AppProps } from 'next/app';
-import '../styles/globals.css';
+import { Auth0Provider } from "@auth0/auth0-react";
+import type { AppProps } from "next/app";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const redirectUri = `${process.env['NEXT_PUBLIC_BASE_URL']}/success`;
+  const redirectUri = `${process.env["NEXT_PUBLIC_BASE_URL"]}/success`;
   return (
     <Auth0Provider
-      domain={process.env['NEXT_PUBLIC_AUTH0_DOMAIN']}
-      clientId={process.env['NEXT_PUBLIC_AUTH0_CLIENT_ID']}
+      domain={process.env["NEXT_PUBLIC_AUTH0_DOMAIN"]}
+      clientId={process.env["NEXT_PUBLIC_AUTH0_CLIENT_ID"]}
       redirectUri={redirectUri}
     >
       <Component {...pageProps} />

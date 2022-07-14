@@ -1,5 +1,5 @@
 {
-  "name": "next-example",
+  "name": "base-wallet",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,7 +24,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "msw": "^0.25.0",
-    "next": "12.1.6",
+    "next": "12.2.2",
     "node-rsa": "^1.1.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
