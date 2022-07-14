@@ -1,13 +1,30 @@
 import { useRouter } from "next/router";
 import React from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import LoginButton from "../elements/Button/LoginButton";
 import SignUpButton from "../elements/Button/SignUpButton";
 import BaseLink from "../elements/Link/BaseLink";
 import BaseTextArea from "../elements/TextArea/BaseTextArea";
 
+type LoginFormData = {
+  email: string;
+  password: string;
+};
+
+const onSubmit: SubmitHandler<LoginFormData> = (data) => {
+  alert(JSON.stringify(data, null));
+};
+
 const LoginForm: React.FC = () => {
+  const {
+    control,
+    formState: { errors },
+    getValues,
+    handleSubmit,
+    register,
+  } = useForm<LoginFormData>({ mode: "onSubmit", reValidateMode: "onBlur" });
+
   const router = useRouter();
-  console.log(router.route);
 
   return (
     <>
@@ -23,7 +40,7 @@ const LoginForm: React.FC = () => {
               Login to your Wallet
             </h2>
           </div>
-          <form className="mt-8 space-y-6" action="#" method="POST">
+          <form className="mt-8 space-y-6" onSubmit={handleSubmit(onSubmit)}>
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="-space-y-px rounded-md shadow-sm">
               <div>

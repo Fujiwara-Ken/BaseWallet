@@ -7,15 +7,14 @@ type BaseLinkProps = {
   className?: string;
 };
 
-// TODO: aタグのままではスタイル反映されないので、Nextタグで反映されるよう修正
 const BaseLink: React.FC<BaseLinkProps> = ({ ...props }) => {
   const baseLinkStyling = `font-medium text-indigo-600 hover:text-indigo-500`;
 
   return (
     <div className="flex justify-between items-center">
       <div className="text-sm">
-        <Link href="#" className={baseLinkStyling}>
-          {props.linkLabel}
+        <Link href="#">
+          <a className={baseLinkStyling}>{props.linkLabel}</a>
         </Link>
       </div>
     </div>

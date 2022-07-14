@@ -1,10 +1,14 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import React from "react";
 
-type BaseTextAreaProps = {
+export type BaseTextAreaProps = {
+  formName: string;
+  isError: unknown;
+  isSingleLine: boolean;
   label: string;
-  isDisabled?: boolean;
-  className?: string;
-  width?: string;
+  placeholder: string;
+  register: unknown;
+  validation?: Object;
 };
 
 const BaseTextArea: React.FC<BaseTextAreaProps> = ({ ...props }) => {
@@ -17,7 +21,11 @@ const BaseTextArea: React.FC<BaseTextAreaProps> = ({ ...props }) => {
       <label className={labelStyling} htmlFor="password">
         {props.label}
       </label>
-      <input type="text" className={textAreaStyling} />
+      <input
+        {...props.register(props.formName, { ...props.validation })}
+        className={textAreaStyling}
+        type="text"
+      />
     </div>
   );
 };
